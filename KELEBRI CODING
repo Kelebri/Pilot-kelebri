@@ -1,6 +1,408 @@
-kelebri.html
-about.html
-contact.html
-style.css
-script.js
-images
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<body class="about-page">
+
+<nav>
+<a href="kelebri.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h1>KELVIN KIMUTAI</h1>
+
+<p>,<b>KELVIN KIMUTAI</b> was born in the year <b>2004</b> month of July date 28 at Olbutyo center, Kong'asis location, Chepalungu constituency in Bomet County. He started his education at <b>SEGEMIK COMPREHENSIVE SCHOOL</b> for primary education and went to <b>OLBUTYO BOYS HIGH SCHOOL</b> for secondary education his principal being Chief Principal <b>JOHN MASINDE MUKONGOLO</b>. Later on 2023 to 2027 he joined <b>UNIVERSITY OF KABIANGA</b> to persue degree course in <b>EDUCATION SCIENCE</b>, which make him a <b>Mathematics</b> and <b>Computer Studies</b> teacher. In the year 2027, he went to <b>FLIGHT STAR ACADEMY</b> to train as a pilot which make him also a Pilot by proffesion. <b>Pilot Kelebri</b> is a dancer by talent and also music producer, here are some of his hobbies; research, swimming, singing, watching movies and songs, travelling and teaching. He is engaged for now but not married with one fine lady from <b>Australia</b> and <b>Kenyan</b> by <b>nationality</b>. Since he is a fan of <b>Artistry</b>, his favorite art is <b>Music</b>. His favorite Secular artist is <b>Shensea</b> and a kalenjin artist known as <b>Patoto Pa Sweetstar</b> while his favorite Gospel artist is a Catholic singer by the name <b>Anastacia Muema</b>. He is also a die heart football fan supporting <b>The Almighty Arsenal FC</b>, <b>Barcelona</b> and <b>Bayern Munich</b>. His favorite player in Arsenal player is <b>Victor Gyokeres</b> and other like <b>Max Dowman</b> and <b>Gabriel Maghales</b>, his <b>GOAT</b> player is <b>CR7</b> and in Arsenl is <b>Thiery Henry</b>.</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<a href="kelebri.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h1>Contact me</h1>
+
+<form>
+<form action="https://formspree.io/f/yourID" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<br><br>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<br><br>
+
+<textarea name="message" placeholder="Your Message"></textarea>
+
+<br><br>
+
+<button type="submit">Send</button>
+
+</form>
+
+<h2>Contact Me</h2>
+
+<p>WhatsApp:</p>
+<a href="https://wa.me/254728085612">Chat on WhatsApp</a>
+
+<p>Email:</p>
+<a href="mailto:kelvingesh67@gmail.com">Send Email</a>
+
+<p>Facebook:</p>
+<a href="https://facebook.com/kelebrikevoh">Visit Facebook</a>
+
+<p>TikTok:</p>
+<a href="https://tiktok.com/@kevoh.kevoh1">Visit TikTok</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>PILOT KELEBRI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<footer>
+
+<p>© 2026 Pilot Kelebri. All Rights Reserved.</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</footer>
+
+<a href="https://wa.me/254728085612" class="whatsapp-button" target="_blank">
+💬
+</a>
+
+<body>
+
+<nav>
+<a href="kelebri.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<section class="hero">
+<h1>Pilot Kelebri</h1>
+<p>Welcome to my official website</p>
+</section>
+</nav>
+
+<section class="hero">
+
+<h1>Pilot Kelebri</h1>
+
+<p>Professional Pilot | Aviation Enthusiast</p>
+
+<button>Contact Me</button>
+
+</section>
+
+<h1>Welcome to Pilot Kelebri's page</h1>
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="images/pic1.jpg" onclick="openImage(this)">
+<img src="images/pic2.jpg" onclick="openImage(this)">
+<img src="images/pic3.jpg" onclick="openImage(this)">
+<div class="slideshow">
+<img class="slides" src="images/pic1.jpg">
+<img class="slides" src="images/pic2.jpg">
+<img class="slides" src="images/pic3.jpg">
+
+</div>
+
+<div id="lightbox">
+<span onclick="closeImage()">X</span>
+<img id="lightbox-img">
+</div>
+let images = document.querySelectorAll(".gallery img");
+
+images.forEach(img => {
+img.addEventListener("click", function(){
+alert("Umebonyeza picha!");
+});
+});
+
+function openImage(img){
+let lightbox = document.getElementById("lightbox");
+let lightboxImg = document.getElementById("lightbox-img");
+
+lightbox.style.display = "flex";
+lightboxImg.src = img.src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display = "none";
+}
+
+let slideIndex = 0;
+
+showSlides();
+
+function showSlides(){
+let slides = document.getElementsByClassName("slides");
+
+for(let i = 0; i < slides.length; i++){
+slides[i].style.display = "none";
+}
+
+slideIndex++;
+
+if(slideIndex > slides.length){
+slideIndex = 1;
+}
+
+slides[slideIndex-1].style.display = "block";
+
+setTimeout(showSlides, 3000);
+}
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+nav{
+background:black;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.gallery img{
+width:200px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+text-align:center;
+}
+
+nav{
+background:#111;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+}
+
+nav a:hover{
+color:orange;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.gallery img{
+width:220px;
+cursor:pointer;
+border-radius:8px;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+#lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+}
+
+#lightbox img{
+max-width:80%;
+max-height:80%;
+}
+
+#lightbox span{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.hero{
+background:url("images/pic1.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 20px;
+}
+
+.slideshow{
+max-width:800px;
+margin:auto;
+position:relative;
+}
+
+.slides{
+width:100%;
+display:none;
+border-radius:10px;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:orange;
+transform:scale(1.1);
+}
+
+.hero{
+background:url("images/pic1.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:150px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.hero button{
+padding:12px 25px;
+font-size:18px;
+background:orange;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+margin-top:40px;
+}
+
+footer a{
+color:orange;
+text-decoration:none;
+margin:10px;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
+.social i{
+font-size:25px;
+margin:10px;
+color:orange;
+transition:0.3s;
+}
+
+.social i:hover{
+color:white;
+transform:scale(1.2);
+}
+
+@media (max-width:768px){
+
+.gallery{
+flex-direction:column;
+align-items:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+
+}
+
+.whatsapp-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 10px gray;
+}
+
+.about-page{
+background-color: lightblue;
+}
